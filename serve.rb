@@ -1,5 +1,8 @@
 require 'sinatra'
+require 'erb'
 
 get '/' do
-  "Hello, Cham Geeks!"
+  # this is to demonstrate
+  view = File.new('views/index.erb', 'r')
+  erb(view.read)
 end
